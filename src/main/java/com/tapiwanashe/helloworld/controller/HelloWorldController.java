@@ -1,4 +1,4 @@
-package com.tapiwanashe.helloworld;
+package com.tapiwanashe.helloworld.controller;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;

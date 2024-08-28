@@ -10,3 +10,5 @@ steps:
 images: ["australia-southeast1-docker.pkg.dev/springboothello-433901/spring-boot-helloworld"]
 options:
   logging: CLOUD_LOGGING_ONLY
+
+  #gcloud auth configure-docker australia-southeast1-docker.pkg.dev
