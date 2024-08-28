@@ -9,5 +9,4 @@ steps:
     args: ["build", "-t", "africa-south1-docker.pkg.dev/$PROJECT_ID/$_REPO_NAME/SpringBootHelloWorld", "--build-arg=JAR_FILE=target/helloworld-0.0.1-SNAPSHOT.jar", "."]
 images: ["africa-south1-docker.pkg.dev/$PROJECT_ID/$_REPO_NAME/SpringBootHelloWorld"]
 options:
-  logging:
-    logging_option: NONE
+  logging: CLOUD_LOGGING_ONLY
