@@ -1,0 +1,12 @@
+
+steps:
+  - name: maven:3-eclipse-temurin-17-alpine
+    entrypoint: mvn
+    args: ["test"]
+  - name: maven:3-eclipse-temurin-17-alpine
+    entrypoint: mvn
+    args: ["package", "-Dmaven.test.skip=true"]
+  - name: gcr.io/cloud-builders/docker
+    args: ["build", "-t", "africa-south1-docker.pkg.dev/$PROJECT_ID/$_REPO_NAME/SpringBootHelloWorld", "--build-arg=JAR_FILE=target/helloworld-0.0.1-SNAPSHOT.jar", "."]
+images: ["africa-south1-docker.pkg.dev/$PROJECT_ID/$_REPO_NAME/SpringBootHelloWorld"]
+# [END cloudbuild_maven]
