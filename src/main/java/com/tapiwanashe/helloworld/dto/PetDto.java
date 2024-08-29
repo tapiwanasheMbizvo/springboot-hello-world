@@ -33,6 +33,11 @@ public class PetDto {
         this.petDescription = petDescription;
     }
 
+    public PetDto(String petName, String petDescription) {
+        this.petName = petName;
+        this.petDescription = petDescription;
+    }
+
 
     @Override
     public String toString() {

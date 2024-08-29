@@ -15,8 +15,6 @@ import org.springframework.web.bind.annotation.RestController;
 import com.tapiwanashe.helloworld.dto.PetDto;
 import com.tapiwanashe.helloworld.service.PetService;
 
-import lombok.AllArgsConstructor;
-
 @RestController
 @RequestMapping("api/v1/pets")
 
@@ -38,7 +36,7 @@ public class PetController {
     }
 
      @GetMapping("/{id}")
-    public  ResponseEntity<PetDto> getOneBook(@PathVariable Long id){
+    public  ResponseEntity<PetDto> getOnePet(@PathVariable Long id){
 
 
         return  ResponseEntity.ok().body(petService.getPetById(id).get());
@@ -46,14 +44,14 @@ public class PetController {
     }
 
     @PostMapping
-    public  ResponseEntity<PetDto> saveOneBook(@RequestBody PetDto petDto){
+    public  ResponseEntity<PetDto> saveOnePet(@RequestBody PetDto petDto){
 
         return  ResponseEntity.status(HttpStatus.CREATED).body(petService.savePetDto(petDto));
 
     }
 
     @PutMapping
-    public  ResponseEntity<PetDto> updateOneBook(@RequestBody PetDto petDto){
+    public  ResponseEntity<PetDto> updateOnepet(@RequestBody PetDto petDto){
 
         return  ResponseEntity.status(HttpStatus.CREATED).body(petService.savePetDto(petDto));
 

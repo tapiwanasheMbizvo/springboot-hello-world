@@ -2,9 +2,9 @@ spring:
   application:
     name: pets application
   datasource:
-    url: jdbc:postgresql://localhost:5543/pet_shop
-    username: postgres
-    password: root
+    url: jdbc:postgresql://localhost:5432/pet_shop
+    username: ${PET_DB_USER}
+    password: ${PET_DB_PSWD}
     driver-class-name: org.postgresql.Driver
   jpa:
     properties:
@@ -13,4 +13,6 @@ spring:
   flyway:
     enabled: true
 
-  
+
+server:
+  port: 8785
