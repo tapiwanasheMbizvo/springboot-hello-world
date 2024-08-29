@@ -2,7 +2,7 @@ spring:
   application:
     name: pets application
   datasource:
-    url: jdbc:postgresql://localhost:5432/pet_shop
+    url: jdbc:postgresql://localhost:5542/pet_shop
     username: ${PET_DB_USER}
     password: ${PET_DB_PSWD}
     driver-class-name: org.postgresql.Driver
