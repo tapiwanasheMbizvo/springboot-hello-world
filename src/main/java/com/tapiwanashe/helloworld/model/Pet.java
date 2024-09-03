@@ -10,7 +10,6 @@ import jakarta.persistence.Table;
 
 @Entity
 @Table(name = "pets_tb")
-
 public class Pet {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
