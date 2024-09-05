@@ -1,4 +1,10 @@
 spring:
+  security:
+    oauth2:
+      resourceserver:
+        jwt:
+          issuer-uri: ${KEY_CLOAK_ISSUER_URI}
+          jwk-set-uri: ${KEY_CLOAK_ISSUER_URI}/${JWK_SET_URI}
   application:
     name: pets application
   datasource:

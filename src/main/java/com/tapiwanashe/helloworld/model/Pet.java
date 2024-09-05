@@ -21,6 +21,11 @@ public class Pet {
     @Column(name = "pet_description", unique = false, nullable = false)
     private String petDescription;
 
+    public Pet(String jack, String russel) {
+        this.petName =jack;
+        this.petDescription= russel;
+    }
+
     public Long getId() {
         return this.id;
     }

@@ -17,7 +17,6 @@ import com.tapiwanashe.helloworld.service.PetService;
 
 @RestController
 @RequestMapping("api/v1/pets")
-
 public class PetController {
 
     private final PetService petService;
