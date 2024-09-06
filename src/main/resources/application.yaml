@@ -6,9 +6,9 @@ spring:
           issuer-uri: ${KEY_CLOAK_ISSUER_URI}
           jwk-set-uri: ${KEY_CLOAK_ISSUER_URI}/${JWK_SET_URI}
   application:
-    name: pets application
+    name: pet-backend
   datasource:
-    url: jdbc:postgresql://localhost:5543/pet_shop
+    url: ${PET_BACK_END_DB_URL}
     username: ${PET_DB_USER}
     password: ${PET_DB_PSWD}
     driver-class-name: org.postgresql.Driver
