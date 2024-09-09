@@ -18,7 +18,21 @@ spring:
         dialect: org.hibernate.dialect.PostgreSQLDialect
   flyway:
     enabled: true
+    url: ${PET_BACK_END_DB_URL}
+    user: ${PET_DB_USER}
+    password: ${PET_DB_PSWD}
+    locations: classpath:db/migration
 
 
+
+  profiles:
+    active: dev
+
+  cloud:
+    config:
+      label: latest
+
+  config:
+    import: configserver:http://localhost:8888
 server:
   port: 8785
